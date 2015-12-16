@@ -1,0 +1,92 @@
+// --- Useful SASS mixins and functions ---
+
+// Vertically center content with transformations
+@mixin v-center() {
+	top: 50%;
+	@include prefix(transform, translateY(-50%));
+}
+// Add accent color to a black and white color
+@function bnw-accent($bnw-pr,$accent-pr) {
+	@return mix(mix($white,$black,$bnw-pr),$accent,$accent-pr);
+}
+
+// Animate SVG stroke path
+@mixin animate-svg-dash() {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	@include prefix(animation,dash 5s $easing both);
+}
+
+// Vendor prefix
+@mixin prefix($name, $argument) {
+	-webkit-#{$name}: #{$argument};
+	//-khtml-#{$name}: #{$argument};
+	-moz-#{$name}: #{$argument};
+	-ms-#{$name}: #{$argument};
+	-o-#{$name}: #{$argument};
+	#{$name}: #{$argument};
+}
+
+// Vendor prefix with 2 values
+@mixin prefix($name, $argument, $argument2:"") {
+	@if $argument2 == "" {
+		$argument2: unquote($argument2);
+	} @else {
+		$argument2: ", #{$argument2}";
+	}
+	-webkit-#{$name}: #{$argument}#{$argument2};
+	//-khtml-#{$name}: #{$argument}#{$argument2};
+	-moz-#{$name}: #{$argument}#{$argument2};
+	-ms-#{$name}: #{$argument}#{$argument2};
+	-o-#{$name}: #{$argument}#{$argument2};
+	#{$name}: #{$argument}#{$argument2};
+}
+
+// Cross browser opacity
+@mixin opacity($opacity) {
+	-webkit-opacity: $opacity/10;
+	-khtml-opacity: $opacity/10;
+	-moz-opacity: $opacity/10;
+	opacity: $opacity/10;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="#{$opacity*10}")";
+	filter: alpha(opacity=#{$opacity*10});
+}
+
+// Depracated: box-shadow with IE support
+@mixin box-shadow($shadow) {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	-ms-box-shadow: $shadow;
+	-o-box-shadow: $shadow;
+	box-shadow: $shadow;
+	// Internet Exploder
+	//-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=0, Color='#000000')";
+	//filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=0, Color='#000000');
+}
+
+// Cross browser gradient background
+@mixin gradient($from,$to) {
+	background: mix($from,$to,50%);
+	background: -moz-linear-gradient(top, #{$from} 0%, #{$to} 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#{$from}), color-stop(100%,#{$to}));
+	background: -webkit-linear-gradient(top, #{$from} 0%, #{$to} 100%);
+	background: -o-linear-gradient(top, #{$from} 0%, #{$to} 100%);
+	background: -ms-linear-gradient(top, #{$from} 0%, #{$to} 100%);
+	background: linear-gradient(to bottom, #{$from} 0%, #{$to} 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$from}', endColorstr='#{$to}',GradientType=0);
+}
+
+// Remove tap highlights on mobile
+@mixin remove-tap-color() {
+	-webkit-tap-highlight-color: transparent;
+	-moz-tap-highlight-color: transparent;
+	-ms-tap-highlight-color: transparent;
+	-o-tap-highlight-color: transparent;
+	tap-highlight-color: transparent;
+
+	-webkit-touch-callout: none;
+	-moz-touch-callout: none;
+	-ms-touch-callout: none;
+	-o-touch-callout: none;
+	touch-callout: none;
+}

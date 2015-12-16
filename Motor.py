@@ -37,13 +37,13 @@ class Motor:
 		return self.speed
 
 	# Start motor
-	def start(self):
-		self.power.start(0)
-		self.set_speed(40)
+	def start(self,start_dc):
+		self.power.start(start_dc)
+		#self.set_speed(40)
 
 	# Stop motor
 	def stop(self,exit):
 		self.set_speed(0)
 		self.power.stop()
-		if exit == true:
+		if exit == True:
 			self.GPIO.cleanup()

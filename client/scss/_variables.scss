@@ -1,0 +1,15 @@
+// --- Variables ---
+
+// Main
+$font-stack: -apple-system, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$img_dir: "../img/";
+
+// Colors
+$black: #000000;
+$white: #FFFFFF;
+$gray: mix($black,$white,50%);
+
+$accent: #F53649;
+
+// Images
+$img_background: $img_dir+"background.jpg";

@@ -7,5 +7,5 @@ import math
 
 class GPS:
 
-    def __init__(self):
-        self.gps = 0
+	def __init__(self):
+		self.gps = 0

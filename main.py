@@ -63,6 +63,3 @@ while True:
 		front_right.set_speed(50)
 		rear_left.set_speed(50)
 		rear_right.set_speed(0)
-
-
-

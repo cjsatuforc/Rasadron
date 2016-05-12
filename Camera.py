@@ -1,7 +1,9 @@
 #!/usr/bin/python
-# Raspberry Pi Camera Rev v1.3
+"""
+Raspberry Pi Camera Board Rev v1.3
 
-# THIS IS STILL IN DEVELOPMENT
+THIS IS STILL IN DEVELOPMENT
+"""
 
 import io, time, picamera
 

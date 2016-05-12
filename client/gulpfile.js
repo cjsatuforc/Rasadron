@@ -13,11 +13,11 @@ var gulp = require('gulp'),
 
 // Define our paths
 
-var SASS_PATH = './www/scss/',
-	CSS_PATH = './www/css/',
+var SASS_PATH = './scss/',
+	CSS_PATH = './css/',
 	SASS_FILE = 'main.scss',
 	CSS_FILE = 'main.min.css',
-	JS_PATH = './www/js/',
+	JS_PATH = './js/',
 	JS_FILE = 'main.js',
 	JS_MIN_FILE = 'main.min.js';
 

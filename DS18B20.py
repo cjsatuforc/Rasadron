@@ -1,5 +1,7 @@
 #!/usr/bin/python
-# Temperature Sensor - DS18B20
+"""
+Temperature Sensor - DS18B20
+"""
 
 import os, glob, time, subprocess
 
@@ -15,9 +17,9 @@ class Temperature:
 		self.fahrenheit = 0
 
 	def read_temp_raw(self):
-		f = open(device_file, 'r')
-		lines = f.readlines()
-		f.close()
+		d_file = open(self.device_file, 'r')
+		lines = d_file.readlines()
+		d_file.close()
 		return lines
 
 	# if the above read_temp_raw doesnt work, try this
@@ -28,7 +30,7 @@ class Temperature:
 	# 	lines = out_decode.split('\n')
 	# 	return lines
 
-	def read_temp(self,mode):
+	def read_temp(self, mode):
 		lines = self.read_temp_raw()
 		while lines[0].strip()[-3:] != 'YES':
 			time.sleep(0.2) # Remove this later ?

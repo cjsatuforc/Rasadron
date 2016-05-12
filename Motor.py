@@ -1,5 +1,7 @@
 #!/usr/bin/python
-# Control PWM Motors
+"""
+Control PWM Motors
+"""
 
 from __future__ import division
 import time
@@ -18,7 +20,7 @@ class Motor:
 		#self.start()
 
 	# Set motor speed (increase|decrease|0-100)
-	def set_speed(self,speed):
+	def set_speed(self, speed):
 		if speed == "increase":
 			new_speed = self.get_speed()+1
 		elif speed == "decrease":
@@ -37,12 +39,12 @@ class Motor:
 		return self.speed
 
 	# Start motor
-	def start(self,start_dc):
+	def start(self, start_dc):
 		self.power.start(start_dc)
 		#self.set_speed(40)
 
 	# Stop motor
-	def stop(self,exit):
+	def stop(self, exit):
 		self.set_speed(0)
 		self.power.stop()
 		if exit == True:

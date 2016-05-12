@@ -1,7 +1,9 @@
 #!/usr/bin/python
-# GPS Sensor - GY-GPS6MV2 (NEO-6M-0-001)
+"""
+GPS Sensor - GY-GPS6MV2 (NEO-6M-0-001)
 
-# THIS IS STILL IN DEVELOPMENT
+THIS IS STILL IN DEVELOPMENT
+"""
 
 import math
 

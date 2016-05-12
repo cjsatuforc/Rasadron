@@ -1,11 +1,14 @@
 #!/usr/bin/python
-# Main Launcher
+"""
+Main Rasadron launcher file
+"""
+
 from __future__ import division
 import time, math, sys, os
 import RPi.GPIO as GPIO
 
 from Motor import Motor
-from DS18B10 import Temperature
+from DS18B20 import Temperature
 from MPU6050 import Gyro
 #from GPS6MV import GPS
 #from QC1602A import LCD
@@ -27,10 +30,10 @@ print 'Initializing motors...'
 
 motor_pins = [11,13,15,16]
 
-front_left = Motor(motor_pins[0],GPIO)
-front_right = Motor(motor_pins[1],GPIO)
-rear_left = Motor(motor_pins[2],GPIO)
-rear_right = Motor(motor_pins[3],GPIO)
+front_left = Motor(motor_pins[0], GPIO)
+front_right = Motor(motor_pins[1], GPIO)
+rear_left = Motor(motor_pins[2], GPIO)
+rear_right = Motor(motor_pins[3], GPIO)
 
 
 print 'Starting stand-by mode...'

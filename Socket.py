@@ -1,5 +1,8 @@
 #!/usr/bin/env python
-# Socket Server
+"""
+Socket Server
+"""
+
 import socketio
 import eventlet
 from flask import Flask, render_template

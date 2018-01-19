@@ -22,19 +22,6 @@ _**\*WIP** - Work in progress._
 I am open to suggestions on how to improve my code and this project in general. 
 If you think there is something to improve, outdated or not quite met by best practices, you can write about it in repository issues section.
 
-## Contact
-
-#### Davis Miculis
-
-* Homepage: [DavisMiculis.com]
-* GitHub: [DavisMiculis]
-* Twitter: [@DavisMiculis]
-* Facebook: [/DavisMiculis1]
-
-## Credits
-
-[Me]? :D
-
 ## License
 
 [MIT]
@@ -48,11 +35,5 @@ If you think there is something to improve, outdated or not quite met by best pr
 [MPU6050.py]:MPU6050.py
 [QC1602A.py]:QC1602A.py
 [Webs.py]:Webs.py
-
-[DavisMiculis]:https://github.com/DavisMiculis
-[/DavisMiculis1]:https://facebook.com/DavisMiculis1
-[@DavisMiculis]:http://twitter.com/davismiculis
-[DavisMiculis.com]:http://DavisMiculis.com
-[Me]:https://github.com/DavisMiculis
 
 [MIT]:LICENSE
